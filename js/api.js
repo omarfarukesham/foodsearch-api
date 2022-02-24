@@ -1,17 +1,27 @@
 searchFood = () =>{
     const getInputText = document.getElementById('search-input')
     const getValue = getInputText.value
-    console.log(getValue)
-    getInputText.value = ''
-    const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${getValue}`
-    fetch(url)
-    .then(res => res.json())
-    .then(data => displayInfo(data.meals))
+    if(getValue == '' || getValue < 0){
+        const getError = document.getElementById('error')
+        const p = document.createElement(p)
+        p.innerText = 'Empty and Negative number is not allow'
+        getError.appendChild(p)
+
+    }else{
+        console.log(getValue)
+        getInputText.value = ''
+        const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${getValue}`
+        fetch(url)
+        .then(res => res.json())
+        .then(data => displayInfo(data.meals))
+    }
+    
 }
 
 const displayInfo = (data) =>{
     //console.log(data)
     const getArea = document.getElementById('getDynamicInfo')
+    getArea.innerHTML = ''
     for(const foodInfo of data){
        const div = document.createElement('div')
             div.classList.add('col')
@@ -52,6 +62,7 @@ const productDetails = (meal)=>{
                 </div>
     `
     getMealDetailsArea.appendChild(div)
+    // getMealDetailsArea.innerHTML = ''
 }
 
 

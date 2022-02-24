@@ -16,31 +16,29 @@
 </head>
 
 <body class="bg-light">
-    <div class="d-flex flex-column align-items-center"></div>
        
         <h1 class="text-center fs-1 fw-bold text-info">Search Your Favorit Meal</h1>
-        <div id="error" class="fs-3 text-danger"></div>
+        <!-- error showing msg  start here -->
+        <p id="error" class="text-danger text-center"></p>
+        <!-- error showing msg code end here  -->
+
+        <!-- search input field and button here  -->
         <div class="input-group mb-3 w-50 mx-auto ">
             <input id="search-input" type="text" class="form-control"  placeholder="Search Food" aria-label="Recipient's username" aria-describedby="button-addon2">
             <button class="btn btn-outline-secondary" type="button" onclick="searchFood()">Search</button>
         </div>
-        <!-- products details information will dynamically load here  -->
-        <div id="detailProInfo" class="w-50 mx-auto">
-        </div>
+        <!-- No search result error showing msg  start here -->
+        <div id="noResult" class="fs-3 text-danger text-center"></div>
+        <!-- No search result error showing msg code end here  -->
 
-    <div class="container">
-        <div class="row row-cols-1 row-cols-md-3 g-4" id="getDynamicInfo">
-            <!-- <div class="col">
-              <div class="card">
-                <img src="images/rice.jpg" class="card-img-top img-fluid" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                </div>
-              </div>
-            </div>           -->
-          </div>
-    </div>
+        <!-- products details information will dynamically load here  -->
+        <div id="detailProInfo" class="w-25 h-25 mx-auto"> </div>
+
+        <!-- all product serach result will show here  -->
+      <div class="container">
+        <div class="row row-cols-1 row-cols-md-3 g-4" id="getDynamicInfo"></div>
+      </div>
+       <!-- all products result end here  -->
 
 
 

@@ -27,12 +27,10 @@ searchFood = () =>{
 const displayInfo = (data) =>{
    // console.log(data)
     const getArea = document.getElementById('getDynamicInfo')
+    const noResult = document.getElementById('noResult')
     getArea.innerHTML = ''
     if(data == null){
-       const noResult = document.getElementById('noResult')
-        const h1 = document.createElement('h1')
-        h1.innerText = ' Opp! No Result Found, try again'
-        noResult.appendChild(h1)
+        noResult.innerText = 'Opp! No result has found, please Try again'
     }else{
         for(const foodInfo of data){
             const div = document.createElement('div')

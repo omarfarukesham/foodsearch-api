@@ -16,8 +16,10 @@
 </head>
 
 <body class="bg-light">
-       
-        <h1 class="text-center fs-1 fw-bold text-info">Search Your Favorit Meal</h1>
+       <div  id="preloader">
+         <img src="images/loader.gif" alt="">
+       </div>
+        <h1 class="text-center fs-1 fw-bold text-info">Search Your Favorite Meal</h1>
         <!-- error showing msg  start here -->
         <p id="error" class="text-danger text-center"></p>
         <!-- error showing msg code end here  -->
@@ -39,10 +41,8 @@
         <div class="row row-cols-1 row-cols-md-3 g-4" id="getDynamicInfo"></div>
       </div>
        <!-- all products result end here  -->
-
-
-
-   <!-- javascript script link here  -->
+     
+      <!-- javascript script link here  -->
     <script src="js/api.js"></script>
 </body>
 </html>

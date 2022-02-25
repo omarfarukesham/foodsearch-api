@@ -82,4 +82,8 @@ const productDetails = (meal)=>{
 }
 
 
-
+const loader = document.getElementById('preloader')
+window.onload = function(){
+    //hide the preloader
+    loader.style.display = 'none'
+}
